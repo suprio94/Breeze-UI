@@ -9,11 +9,18 @@
     --color1: #1f1f27;
     --color2: #f3f4f6;
 }
-/* div{
+div{
     display: block;
-} */
+}
 
-.grid-template{
+body{
+    background: var(--color2);
+    color:var(--color1);
+    line-height: 1.6;
+    height: 100vh;
+}
+
+/* .grid-template{
     display: grid;
     grid-template-areas: 
     "nav nav nav"
@@ -53,7 +60,7 @@ ul{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
-}
+} */
 
 /* @media screen and (max-width : 770px)
 .nav-item{
@@ -83,3 +90,197 @@ section{
 .social-icons{
     margin-right: 1rem;
 }
+
+
+/* Add Classes from styles1.css */
+
+main{
+    text-align: center;
+    margin: 1rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 1rem;
+    
+}
+
+main .head{
+    margin: auto;
+    max-width: 700px;
+    width: 80%;
+    text-align: center;
+    color : #333333;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+main .subhead{
+    margin: auto;
+    padding: 1rem 0 1.5rem;
+    max-width: 750px;
+    width: 90%;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+
+main .head h2{
+    position: relative;
+    -webkit-text-stroke: 0.3vw #383d52;
+    text-transform: uppercase;
+}
+
+main .head h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+70%,90%{
+    width: 100%;
+}
+}
+main .subhead{
+    margin: auto;
+    padding: 1rem 0 1.5rem;
+    max-width: 750px;
+    width: 90%;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    
+
+    /* scroll-snap-align: center; */
+    }
+
+   /* section div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   } */
+    
+    section h1{
+    font-size: 4rem;
+    padding: 1rem;
+    }
+    
+    section p{
+    font-size: 1.5rem;
+   /* margin-left: 4rem;
+   padding: 0.5rem;
+   width: 100%; */
+    }
+
+    .heading{
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    .fab-container{
+
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .fab-icon-holder{
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background: #016fb9;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .fab-icon-holder:hover{
+        opacity: 0.8;
+    }
+
+    .fab-icon-holder i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 25px;
+        color: #ffffff;
+    }
+
+    .fab{
+        width: 60px;
+        height: 60px;
+      color: white;
+      position: relative;
+      top:0;
+      right: -50px;
+      font-size: 1.5rem;
+      display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding: 1rem;
+   
+    }
+    .fab1{
+        width: 60px;
+        height: 60px;
+        background: #d23f31;
+    }
+    .fab-options{
+        list-style-type: none;
+        margin: 0;
+        position: absolute;
+        bottom: 70px;
+        right: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        transform: scale(0);
+        transform-origin: 85% bottom;
+    }
+
+    .fab:hover + .fab-options, .fab-options:hover {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    .fab-options li{
+        display: flex;
+        justify-content: flex-end;
+        padding: 5px;
+    }
+    .lbl{
+        padding: 2px 5px;
+        align-self: center;
+        user-select: none;
+        white-space: nowrap;
+        border-radius: 3px;
+        font-size: 16px;
+        background: #666666;
+        color: #ffffff;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        margin-right: 10px;
+
+    }
+
